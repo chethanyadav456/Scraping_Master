@@ -11,6 +11,8 @@ This is a web scraping project that scrapes the various websites for the latest 
 
 Challenge: [Bright Data Web Scraping Challenge](https://dev.to/devteam/join-us-for-the-bright-data-web-scraping-challenge-3000-in-prizes-3mg2?)
 
+Submitted Post Link: [Bright Data Web Scraping Challenge Submission](https://dev.to/chethanyadav/the-tech-news-scraper-14kc)
+
 ## Installation
 1. Clone the repository
 ```bash
