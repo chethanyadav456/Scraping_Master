@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Articles</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    .articles-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+      gap: 20px; /* Add space between items */
+      margin-top: 20px;
+    }
+    .article {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .article img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    .article-title {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    .article-content {
+      margin-top: 10px;
+    }
+    .article-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #007BFF;
+      text-decoration: none;
+    }
+    .article-link:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      .articles-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+      }
+    }
+    @media (max-width: 480px) {
+      .articles-container {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>News Articles</h1>
+  <div class="articles-container">
+    <% if (articles.length > 0) { %>
+      <% articles.forEach((article) => { %>
+        <div class="article">
+          <h2 class="article-title"><%= article.title %></h2>
+          <% if (article.thumbnail) { %>
+            <img src="<%= article.thumbnail %>" alt="<%= article.title %>">
+          <% } %>
+          <p class="article-content"><%= article.content || "No content available." %></p>
+          <a href="<%= article.link %>" target="_blank" class="article-link">Read more</a>
+        </div>
+      <% }); %>
+    <% } else { %>
+      <p>No articles found.</p>
+    <% } %>
+  </div>
+</body>
+</html>
