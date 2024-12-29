@@ -1,24 +1,20 @@
+> [!NOTE]
+> I created this project for the Bright Data Web Scraping Challenge, utilizing Bright Data's Scraping Browser to extract dynamic data from interactive websites.
+
 # Scraping Master
 
-## Description
 This is a web scraping project that scrapes the various websites for the latest technological news and updates. The project is built using javascript and node.js. The project uses the puppeteer library to scrape the websites. The project scrapes the following websites:
 
-1. [TechCrunch](https://techcrunch.com/)
-2. [The Verge](https://www.theverge.com/)
-3. [Wired](https://www.wired.com/)
-4. [Gizmodo](https://gizmodo.com/)
-5. [Engadget](https://www.engadget.com/)
-6. [Ars Technica](https://arstechnica.com/)
-7. [CNET](https://www.cnet.com/)
-8. [TechRadar](https://www.techradar.com/)
-9. [Mashable](https://mashable.com/)
-10. [Digital Trends](https://www.digitaltrends.com/)
+1. [Artificial Intelligence](https://www.artificialintelligence-news.com/artificial-intelligence-news/)
+2. [The Hacker News](https://thehackernews.com/)
 
+
+Challenge: [Bright Data Web Scraping Challenge](https://dev.to/devteam/join-us-for-the-bright-data-web-scraping-challenge-3000-in-prizes-3mg2?)
 
 ## Installation
 1. Clone the repository
 ```bash
-git clone <git-url>
+git clone https://github.com/chethanyadav456/Scraping_Master.git
 ```
 2. Run `npm install` to install the dependencies
 ```bash
@@ -30,4 +26,28 @@ node master.js
 ```
 4. Create a `.env` file in the root directory and add the following environment variables
 ```env
+MONGO_URI=
+BROWSER_WS=
+```
+5. Add the MongoDB URI in the `MONGO_URI` variable
+6. Add the browser websocket URL in the `BROWSER_WS` variable
 
+## Usage
+The project scrapes the websites and stores the data in the MongoDB database. The project uses the Bright Data Scraping Browser to scrape the websites. The project uses the puppeteer library to scrape the websites. The project scrapes the following websites:
+
+1. [Artificial Intelligence](https://www.artificialintelligence-news.com/artificial-intelligence-news/)
+2. [The Hacker News](https://thehackernews.com/)
+
+The project scrapes the following data from the websites:
+
+1. Title
+2. Description
+3. URL
+4. Image URL
+5. Published Date
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## Author
+[Chethan Yadav](https://github.com/chethanyadav456)
